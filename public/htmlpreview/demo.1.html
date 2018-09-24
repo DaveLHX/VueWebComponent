@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-bundle.js"></script>
+<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+<title>Request-Form demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="../../dist/Request-Form.js"></script>
+
+
+<div id="app">
+    <v-app id="inspire" :dark="isDark">
+        <v-switch label="Toggle dark them" v-model="isDark"></v-switch>
+        <Request-Form></Request-Form>
+    </v-app>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: () => ({
+            isDark: false
+        })
+    })</script>
