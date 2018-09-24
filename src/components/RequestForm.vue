@@ -1,13 +1,13 @@
 <template>
 <section>
+     <h1> {{msg}}</h1>
    <h1> {{activity.name}}</h1>
-    <v-chip>
-          
+    <v-chip>   
            
               <v-avatar class="blue"> {{activity.nbMaleCadets}}</v-avatar>
               Male
           </v-chip>
-     <v-chip>        
+     <v-chip>      
           
                <v-avatar class="pink">{{activity.nbFemaleCadets}}</v-avatar>
                  Female
@@ -82,6 +82,9 @@ export default {
       },
       rations: { required: null }
     };
+  },
+  props: {
+    msg: String
   }
 };
 </script>

@@ -3,7 +3,6 @@
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-bundle.js"></script>
 <!-- having the meterial icons here in conjuction with a vue app at this level makes the icons work in chrome (must be here and in the component!))-->
 <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-
 <!-- this is needed only for the app part that is outside the component  -->
 <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
 
@@ -11,19 +10,28 @@
 <script src="https://unpkg.com/vue"></script>
 <!-- the vuetify.js script can be here or in the component.  But its makes the component too big -->
 <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+<!-- <script src="../../public/htmlpreview/vuetify.js"></script> -->
 <script src="../../dist/Request-Form.js"></script>
 
-
 <div id="app">
+    <!-- <div id="app">
     <v-app id="inspire" :dark="isDark">
-        <v-switch label="Toggle dark them" v-model="isDark"></v-switch>
-        <Request-Form></Request-Form>
-    </v-app>
+        <v-switch label="Toggle dark them" v-model="isDark"></v-switch> -->
+    <Request-Form id="request-form" msg="potatoe"></Request-Form>
+    <!-- </v-app>
+</div> -->
+
 </div>
+<!-- still have a problem with the theme styles in the shadowdom -->
 <script>
-    new Vue({
-        el: '#app',
-        data: () => ({
-            isDark: false
-        })
-    })</script>
+    // using this allows to have vue code in the html page but triggers the events in the component twice.
+    // new Vue({
+    //     el: '#app',
+    //     data() {
+    //         return {
+    //             isDark: false,
+    //             sometext: "muahahaahah"
+    //         };
+    //     },
+    // })
+</script>

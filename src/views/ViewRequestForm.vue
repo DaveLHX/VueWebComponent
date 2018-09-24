@@ -1,11 +1,16 @@
 <template>
-    <request-form></request-form>
+    <request-form :msg='sometext'></request-form>
 </template>
 <script>
 import RequestForm from "@/components/RequestForm.vue";
 
 export default {
-  components: { RequestForm }
+  components: { RequestForm },
+  data() {
+    return {
+      sometext: "hello from vue app"
+    };
+  }
 };
 </script>
 
